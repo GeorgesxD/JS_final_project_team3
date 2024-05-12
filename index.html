@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Hello World</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body>
-  
-    <div class="container">
-        
-    
-        <div class="play-page">
 
+<body>
+
+    <div class="container">
+
+        <!-- Play Page Section -->
+        <div class="play-page">
+            <div class="play-page-title">Let's Play !</div>
+            <div class="play-card">
+
+                <!-- Question Section -->
+                <span class="count">1 from 10</span> <!-- Counter for questions -->
+                <p class="question">Do you Know How to Write " Hello World " in Java ?</p> <!-- Question -->
+                
+                <!-- Input Field for Answer -->
+                <div class="input-field">
+                    <input type="text" placeholder="type here">
+                </div>
+                
+                <!-- Answer Section -->
+                <div class="answer">
+                    <!-- Here the answer will be displayed -->
+                    <p class="answer-text"></p>
+                </div>
+                
+                <!-- Buttons Section -->
+                <div class="play-buttons">
+                    <button class="checkBtn">Check</button> <!-- Check Answer Button -->
+                    <button class="nextBtn disabled">Next</button> <!-- Next Question Button -->
+                </div>
+
+            </div>
         </div>
 
+        <!-- Main Home Section -->
         <div class="main-home">
-            
             <div class="main-card">
                 <p class="main-title">Hello World !</p>
-                <p class="welcome-text">Test your knowledge of "Hello, World!" in various programming languages. Select a language from the dropdown menu, type the code to print "Hello, World!", and click the button to check your answer.</p>
+                <p class="welcome-text">Test your knowledge of "Hello, World!" in various programming languages. Select
+                    a language from the dropdown menu, type the code to print "Hello, World!", and click the button to
+                    check your answer.</p>
                 <button class="startBtn">Go To Game</button>
             </div>
-            
-            
-
         </div>
 
+        <!-- Guide Card Section -->
         <div class="guide-card active">
-                 
             <h1 class="guide-title">Guide To Play</h1>
-
+            <!-- Guide List Section -->
             <div class="guide-list">
                 <ol>
-                    <li> lorem ipsum dolor</li>
-                    <li> lorem ipsum dolor</li>
-                    <li> lorem ipsum dolor</li>
-                    <li> lorem ipsum dolor</li>
+                    <!-- List items explaining the gameplay -->
+                    <li>A random question will show up to you</li>
+                    <li>Type the code required to print "Hello, World!" in the selected language.</li>
+                    <li>Click the button to check your answer.</li>
+                    <li>Receive feedback on whether your code is correct or incorrect.</li>
                 </ol>
             </div>
-
+            <!-- Buttons Section -->
             <div class="buttons">
-                <button class="exitBtn">Exit</button>
-                <button class="playBtn">Play</button>
+                <button class="exitBtn">Exit</button> <!-- Exit Button -->
+                <button class="playBtn">Play</button> <!-- Play Button -->
             </div>
-
         </div>
 
     </div>
-    
 
+    <!-- JavaScript File -->
     <script src="JS.js"></script>
 </body>
+
 </html>
