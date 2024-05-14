@@ -39,3 +39,20 @@ playBtn.addEventListener("click", () => {
     playCard.classList.add("active-page");
   }, 2000);
 });
+
+let qa = {"Java":'System.out.println("Hello World!")',"Python":'print("Hello World!)',"Javascript":"","C++":"","C#":"","GO":"","Rust":"","Pascal":"","Swift":"","php":""};
+let keys = ["Java","Python","Javascript","C++","C#","GO","Rust","Pascal","Swift","php"];
+let i=0;
+
+function checkAnswer(){
+  let answer = document.getElementById("answer").value;
+    if(qa[keys[i]]===answer){
+      alert("Good Job!");
+      i++;
+    }
+    else{
+      alert(" Incorrect, the correct answer was: "+qa[keys[i]]);
+      
+    }
+  };
+
