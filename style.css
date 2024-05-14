@@ -264,8 +264,18 @@ body {
 }
 
 
-.answer .answer-text {
+.answer {
     text-transform: capitalize;
+
+}
+
+.answer-text {
+    color: #0096c7;
+    font-size: 22px;
+    font-size: 350;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 1px;
 }
 
 
@@ -283,9 +293,12 @@ body {
 
 .play-buttons {
     position: relative;
-    top: 120px;
+    top: 60px;
+    bottom: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+;
+    
 }
 
 .play-buttons .checkBtn,
@@ -303,11 +316,7 @@ body {
     transition: 0.3s;
 }
 
-.play-buttons .nextBtn.disabled {
-    background-color: grey;
-    pointer-events: none;
-    border-color: grey;
-}
+
 
 /* animations */
 
