@@ -18,8 +18,8 @@
             <div class="play-card">
 
                 <!-- Question Section -->
-                <span class="count">1 from 10</span> <!-- Counter for questions -->
-                <p class="question">Do you Know How to Write " Hello World " in Java ?</p> <!-- Question -->
+                <span class="count" id="counter">1 out of 10</span> <!-- Counter for questions -->
+                <p class="question" id="q">Do you Know How to Write " Hello World! " in Java ?</p> <!-- Question -->
                 
                 <!-- Input Field for Answer -->
                 <div class="input-field">
@@ -29,13 +29,12 @@
                 <!-- Answer Section -->
                 <div class="answers">
                     <!-- Here the answer will be displayed -->
-                    <p class="answer-text"></p>
+                    <p class="answer-text" id="answer-texts"></p>
                 </div>
                 
                 <!-- Buttons Section -->
                 <div class="play-buttons">
-                    <button class="checkBtn" onclick="checkAnswer()">Check</button> <!-- Check Answer Button -->
-                    <button class="nextBtn">Next</button> <!-- Next Question Button -->
+                    <button class="nextBtn" onclick="checkAnswer()">Next</button> <!-- Next Question Button -->
                 </div>
 
             </div>
