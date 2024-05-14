@@ -11,7 +11,7 @@
 <body>
 
     <div class="container">
-        <!-- Great Job Team from Hassan Assaad -->
+
         <!-- Play Page Section -->
         <div class="play-page">
             <div class="play-page-title">Let's Play !</div>
@@ -23,19 +23,19 @@
                 
                 <!-- Input Field for Answer -->
                 <div class="input-field">
-                    <input type="text" placeholder="type here">
+                    <input type="text" placeholder="type here" id="answer">
                 </div>
                 
                 <!-- Answer Section -->
-                <div class="answer">
+                <div class="answers">
                     <!-- Here the answer will be displayed -->
                     <p class="answer-text"></p>
                 </div>
                 
                 <!-- Buttons Section -->
                 <div class="play-buttons">
-                    <button class="checkBtn">Check</button> <!-- Check Answer Button -->
-                    <button class="nextBtn disabled">Next</button> <!-- Next Question Button -->
+                    <button class="checkBtn" onclick="checkAnswer()">Check</button> <!-- Check Answer Button -->
+                    <button class="nextBtn">Next</button> <!-- Next Question Button -->
                 </div>
 
             </div>
