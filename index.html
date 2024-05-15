@@ -18,23 +18,28 @@
             <div class="play-card">
 
                 <!-- Question Section -->
-                <span class="count" id="counter">1 out of 10</span> <!-- Counter for questions -->
-                <p class="question" id="q">Do you Know How to Write " Hello World! " in Java ?</p> <!-- Question -->
+                <span class="count"> <span class="counter"></span> out of 10</span> <!-- Counter for questions -->
+                <p class="question" >Do you Know How to Write " Hello World ! " in <span class="key"></span> ?</p> <!-- Question -->
                 
                 <!-- Input Field for Answer -->
                 <div class="input-field">
-                    <input type="text" placeholder="type here" id="answer">
+                    <input class="input-answer" type="text" placeholder="type here">
                 </div>
                 
                 <!-- Answer Section -->
                 <div class="answers">
                     <!-- Here the answer will be displayed -->
-                    <p class="answer-text" id="answer-texts"></p>
+                    <p class="answer-text"></p>
+                </div>
+
+                <div class="score">
+                    <p class="scoreText">Your Score is <span class="finalScore"></span> out of 10</p>
                 </div>
                 
                 <!-- Buttons Section -->
                 <div class="play-buttons">
-                    <button class="nextBtn" onclick="checkAnswer()">Next</button> <!-- Next Question Button -->
+                    <button class="checkBtn">check</button>
+                    <button class="nextBtn">Next</button> <!-- Next Question Button -->
                 </div>
 
             </div>

@@ -1,4 +1,3 @@
-\// Selecting DOM elements
 let startBtn = document.querySelector(".startBtn");
 let guideCard = document.querySelector(".guide-card");
 let exitBtn = document.querySelector(".exitBtn");
@@ -7,28 +6,44 @@ let mainHome = document.querySelector(".main-home");
 let playPage = document.querySelector(".play-page");
 let playPageTitle = document.querySelector(".play-page-title");
 let playCard = document.querySelector(".play-card");
+let nextBtn = document.querySelector(".nextBtn");
+let checkBtn = document.querySelector(".checkBtn");
+let answerCont = document.querySelector(".answers");
+let answerText = document.querySelector(".answer-text");
+let questionKey = document.querySelector(".key");
+let counter = document.querySelector(".counter");
+let inputUser = document.querySelector(".input-answer");
+let inputAnswer = document.querySelector(".input-answer").value;
+let scoreCont = document.querySelector(".score");
+let scoreText = document.querySelector(".scoreText");
+let finalScore = document.querySelector(".finalScore");
 
-// Event listener for the start button
+let arr = [];
+let currentIndex = 0;
+
+let wrong = 0;
+
+scoreCont.style.display = "none";
+
+fetchRepo();
+
 startBtn.addEventListener("click", () => {
   guideCard.classList.remove("active");
 
   mainHome.classList.add("blur");
 });
 
-// Event listener for the exit button
 exitBtn.addEventListener("click", () => {
   guideCard.classList.add("active");
 
   mainHome.classList.remove("blur");
 });
 
-// Event listener for the play button
 playBtn.addEventListener("click", () => {
   mainHome.classList.remove("blur");
 
   guideCard.classList.add("active");
 
-  // Setting timeout for animations
   setTimeout(() => {
     mainHome.style.left = 0;
     playPage.style.left = 0;
@@ -37,45 +52,62 @@ playBtn.addEventListener("click", () => {
   setTimeout(() => {
     playPageTitle.classList.add("active-title");
     playCard.classList.add("active-page");
+    inputUser.focus();
   }, 2000);
 });
 
-let qa = {"Java":'System.out.println("Hello World!")',"Python":'print("Hello World!")',"Javascript":'console.log("Hello World!")',"C++":'cout << "Hello World!"',"C#":'Console.WriteLine("Hello World!")',"GO":'fmt.Println("Hello World!")',"Rust":'println!("Hello World!")',"Pascal":"writeln('Hello World!')","Swift":'print("Hello World!")',"php":'echo "Hello World!"'};
-let keys = ["Java","Python","Javascript","C++","C#","GO","Rust","Pascal","Swift","php"];
-let i=0;
-let wrong = 0;
+async function fetchRepo() {
+  let request = await fetch("languages.json");
 
-function checkAnswer(){
-  let answer = document.getElementById("answer").value;
-    if(i>=9){
-      if(qa[keys[9]]===answer){
-        alert("Good Job!");
-      }
-      else{
-        alert(" Incorrect, the correct answer was: "+qa[keys[9]]);
-      }
-      
-      document.getElementById("q").innerHTML = 'Your Results'
-      document.getElementById("counter").innerHTML = "10 out of 10";
-      document.getElementById("answer-texts").innerHTML = "Your final score is: "+(10-wrong)+"/10 !";
-      document.getElementById("answer").value="";
-    }
-    else if(qa[keys[i]]===answer && i<9){
-      alert("Good Job!");
-      i++;
-      document.getElementById("q").innerHTML ='Do you Know How to Write " Hello World! " in '+keys[i]+" ?";
-      document.getElementById("counter").innerHTML = (i+1)+" out of 10";
-      document.getElementById("answer").value="";
-    }
-    else {
-      alert(" Incorrect, the correct answer was: "+qa[keys[i]]);
-      i++;
-      document.getElementById("q").innerHTML ='Do you Know How to Write " Hello World! " in '+keys[i]+" ?";
-      document.getElementById("counter").innerHTML = (i+1)+" out of 10";
-      document.getElementById("answer").value="";
-      wrong++;
-    }
- };
+  let questions = await request.json();
+  nextBtn.classList.add("disabled");
+  if (questions.length === 0) {
+    console.log("No Questions");
+  } else {
+    arr = questions;
+    displayElements(arr[currentIndex]);
+  }
+}
 
- 
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < arr.length - 1) {
+    inputUser.focus();
+    inputUser.value = "";
+    answerCont.style.display = "none";
+    currentIndex++;
+    fetchRepo();
+  } else {
+    answerCont.style.display = "none";
+    finalScore.textContent = currentIndex + 1 - wrong;
+    scoreCont.style.display = "block";
+    nextBtn.remove();
+    checkBtn.remove();
+  }
+});
 
+function displayElements(question) {
+  questionKey.textContent = question.name;
+  counter.textContent = currentIndex + 1;
+}
+
+checkBtn.addEventListener("click", () => {
+  let currentQuestion = arr[currentIndex];
+  checkAnswer(currentQuestion.answer);
+});
+
+function checkAnswer(answer) {
+  let inputAnswer = document.querySelector(".input-answer").value;
+
+  if (inputAnswer.toLowerCase().trim() === answer.toLowerCase().trim()) {
+    answerCont.style.display = "block";
+    answerText.innerHTML = `Correct !`;
+    answerCont.classList.remove("incorrect");
+    answerCont.classList.add("correct");
+    nextBtn.classList.remove("disabled");
+  } else {
+    answerCont.style.display = "block";
+    answerText.innerHTML = `Incorrect, the Answer : ${answer} `;
+    answerCont.classList.add("incorrect");
+    wrong++;
+  }
+}
