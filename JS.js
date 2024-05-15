@@ -1,4 +1,4 @@
-\// Selecting DOM elements
+// Selecting DOM elements
 let startBtn = document.querySelector(".startBtn");
 let guideCard = document.querySelector(".guide-card");
 let exitBtn = document.querySelector(".exitBtn");
