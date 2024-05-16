@@ -1,43 +1,44 @@
 [
-{
-    "name": "java",
-    "answer": "System.out.println(\" Hello World ! \");"
-},
-{
-    "name": "Python",
-    "answer": "print(\" Hello World ! \")"
-},
-{
-    "name": "javaScript",
-    "answer": "console.log(\" Hello World ! \");"
-},
-{
-    "name": "C++",
-    "answer": "cout << \" Hello World ! \";"
-},
-{
-    "name": "C#",
-    "answer": "Console.WriteLine(\" Hello World ! \");"
-},
-{
-    "name": "GO",
-    "answer": "fmt.Println(\" Hello World ! \")"
-},
-{
-    "name": "Rust",
-    "answer": "println!(\" Hello World ! \");"
-},
-{
-    "name": "Pascal",
-    "answer": "writeln(' Hello World ! ');"
-},
-{
-    "name": "Swift",
-    "answer": "print(\" Hello World ! \")"
-},
-{
-    "name": "PHP",
-    "answer": "echo \" Hello World ! \";"
-}
 
-]
+    {
+        "name": "java",
+        "answer": "System.out.println(\"Hello World!\")"
+    },
+    {
+        "name": "Python",
+        "answer": "print(\"Hello World!\")"
+    },
+    {
+        "name": "javaScript",
+        "answer": "console.log(\"Hello World!\")"
+    },
+    {
+        "name": "C++",
+        "answer": "cout << \"Hello World!\""
+    },
+    {
+        "name": "C#",
+        "answer": "Console.WriteLine(\"Hello World!\")"
+    },
+    {
+        "name": "GO",
+        "answer": "fmt.Println(\"Hello World!\")"
+    },
+    {
+        "name": "Rust",
+        "answer": "println!(\"Hello World!\")"
+    },
+    {
+        "name": "Pascal",
+        "answer": "writeln('Hello World!')"
+    },
+    {
+        "name": "Swift",
+        "answer": "print(\"Hello World!\")"
+    },
+    {
+        "name": "PHP",
+        "answer": "echo \"Hello World!\""
+    }
+    
+    ]
