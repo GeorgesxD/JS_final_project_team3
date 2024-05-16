@@ -252,11 +252,7 @@ body {
     color: white;
     padding-left: 5px;
     display: none;
-    /* display none for now */
-
 }
-
-
 
 .correct {
     background-color: rgba(57, 201, 57, 0.6);
@@ -278,7 +274,6 @@ body {
     letter-spacing: 1px;
     text-align: center;
 }
-
 
 .answer-text {
     user-select: none;  
@@ -325,10 +320,6 @@ body {
     background-color: grey;
     border-color: grey;
 }
-
-
-
-
 
 @keyframes typeWriter {
 
