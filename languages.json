@@ -2,7 +2,7 @@
 
     {
         "name": "java",
-        "answer": "System.out.println(\"Hello World!\")"
+        "answer": "System.out.println(\"Hello World!\");"
     },
     {
         "name": "Python",
@@ -10,15 +10,15 @@
     },
     {
         "name": "javaScript",
-        "answer": "console.log(\"Hello World!\")"
+        "answer": "console.log(\"Hello World!\");"
     },
     {
         "name": "C++",
-        "answer": "cout << \"Hello World!\""
+        "answer": "cout << \"Hello World!\";"
     },
     {
         "name": "C#",
-        "answer": "Console.WriteLine(\"Hello World!\")"
+        "answer": "Console.WriteLine(\"Hello World!\");"
     },
     {
         "name": "GO",
@@ -26,11 +26,11 @@
     },
     {
         "name": "Rust",
-        "answer": "println!(\"Hello World!\")"
+        "answer": "println!(\"Hello World!\");"
     },
     {
         "name": "Pascal",
-        "answer": "writeln('Hello World!')"
+        "answer": "writeln('Hello World!');"
     },
     {
         "name": "Swift",
@@ -38,7 +38,7 @@
     },
     {
         "name": "PHP",
-        "answer": "echo \"Hello World!\""
+        "answer": "echo \"Hello World!\";"
     }
     
     ]
