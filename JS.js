@@ -79,9 +79,11 @@ nextBtn.addEventListener("click", () => {
   } else {
     answerCont.style.display = "none";
     finalScore.textContent = currentIndex + 1 - wrong;
+    let fn = parseInt(finalScore.textContent);
     scoreCont.style.display = "block";
     nextBtn.remove();
     checkBtn.remove();
+    checkText(fn);
   }
 });
 
@@ -109,5 +111,18 @@ function checkAnswer(answer) {
     answerText.innerHTML = `Incorrect, the Answer : ${answer} `;
     answerCont.classList.add("incorrect");
     wrong++;
+  }
+}
+
+function checkText(fn) {
+  if (fn >= 7) {
+    playPageTitle.textContent = "You Have Good Info !";
+    playPageTitle.classList.add("good");
+  } else if (fn < 7 && fn >= 4) {
+    playPageTitle.textContent = "Not Bad";
+    playPageTitle.classList.add("notbad");
+  } else {
+    playPageTitle.textContent = "Bad";
+    playPageTitle.classList.add("bad");
   }
 }

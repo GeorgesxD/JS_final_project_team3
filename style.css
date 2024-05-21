@@ -204,6 +204,18 @@ body {
     transition: 0.5s;
 }
 
+.play-page-title.bad {
+    color: red;
+}
+
+.play-page-title.notbad{
+    color: rgb(233, 167, 24);
+}
+
+.play-page-title.good {
+    color: rgba(57, 201, 57, 0.6);
+}
+
 .play-card .question {
     color: var(--texts-color);
     font-size: 22px;
@@ -270,7 +282,7 @@ body {
 
 
 .answer-text {
-    user-select: none;
+   /* user-select: none; */
 }
 
 .active-title {
